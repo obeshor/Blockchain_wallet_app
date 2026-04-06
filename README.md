@@ -1,58 +1,59 @@
-# Application Wallet Blockchain (Tezos)
+# Blockchain Wallet Application (Tezos)
 
-Cette application est un prototype de portefeuille (wallet) pour la blockchain **Tezos**, construit avec **Node.js** et **Express**. Elle permet d'interagir avec le réseau Tezos pour gérer l'activation et la configuration de comptes.
+This application is a wallet prototype for the **Tezos** blockchain, built with **Node.js** and **Express**. It allows users to interact with the Tezos network to manage account activation and configuration.
 
-## 🚀 Fonctionnalités
+## 🚀 Features
 
-- **Initialisation de compte** : Déverrouillage d'identités (notamment issues de la levée de fonds/fundraiser) via mnémonique, email et mot de passe.
-- **Activation de compte** : Envoi d'opérations d'activation vers le réseau Tezos.
-- **Révélation de clé (Reveal)** : Envoi de l'opération de révélation nécessaire pour valider l'adresse sur la blockchain et permettre les futures transactions.
-- **Interface Web** : Utilisation d'EJS pour le rendu des vues côté serveur.
+- **Account Initialization**: Unlocking identities (specifically those from the fundraiser) via mnemonic, email, and password.
+- **Account Activation**: Sending activation operations to the Tezos network.
+- **Key Revelation (Reveal)**: Sending the reveal operation necessary to validate the address on the blockchain and enable future transactions.
+- **Web Interface**: Using EJS for server-side view rendering.
 
-## 🛠️ Stack Technique
+## 🛠️ Tech Stack
 
-- **Backend** : Node.js, Express
-- **Blockchain** : [ConseilJS](https://github.com/Cryptonomic/ConseilJS) (Bibliothèque pour Tezos)
-- **Moteur de template** : EJS
-- **Style** : CSS (Public/stylesheets)
+- **Backend**: Node.js, Express
+- **Blockchain**: [ConseilJS](https://github.com/Cryptonomic/ConseilJS) (Library for Tezos)
+- **Template Engine**: EJS
+- **Styling**: CSS (Public/stylesheets)
 
-## 📁 Structure du Projet
+## 📁 Project Structure
 
-- `app.js` : Point d'entrée de l'application Express.
-- `bin/www` : Script de démarrage du serveur.
-- `controller/` : Contient la logique métier (notamment `TezosController.js`).
-- `routes/` : Définition des points de terminaison (endpoints) de l'API/Web.
-- `views/` : Fichiers EJS pour l'interface utilisateur.
-- `comptes.json` : Stockage local des informations d'un compte Tezos (mnémonique, secret, etc.).
+- `app.js`: Entry point for the Express application.
+- `bin/www`: Server startup script.
+- `controller/`: Contains business logic (notably `TezosController.js`).
+- `routes/`: Definition of API/Web endpoints.
+- `views/`: EJS files for the user interface.
+- `comptes.json`: Local storage for Tezos account information (mnemonic, secret, etc.).
 
 ## ⚙️ Installation
 
-1. Clonez le dépôt :
+1. Clone the repository:
    ```bash
-   git clone <url-du-depot>
+   git clone <repository-url>
    cd Blockchain_wallet_app
-   ```
 
-2. Installez les dépendances :
+2. Install  dependencies :
    ```bash
    npm install
    ```
 
 ## 🖥️ Utilisation
 
-Pour démarrer le serveur de développement :
+To start the ddevelopment server :
 ```bash
 npm start
 ```
 
-Par défaut, l'application est accessible sur `http://localhost:3000`.
+By default, application is  accessible at  `http://localhost:3000`.
 
-### Routes disponibles
-- `GET /` : Page d'accueil.
-- `GET /create` : Déclenche la logique de création et d'activation du compte configuré.
+### Available Routes
+- `GET /` : Homepage.
+- `GET /create` : triggers the creation and activation logic for the configured account.
 
-## ⚠️ Notes de sécurité
-Les informations sensibles (mnémoniques, clés privées) sont actuellement gérées via le fichier `comptes.json`. **Ne jamais utiliser ce mode de stockage en production** ni commiter des clés privées réelles sur un dépôt public.
+## ⚠️ Security Notes 
+Sensitive information (mnemonics, private keys) is currently managed via the `comptes.json` file. **NNever use this storage method in production** or commit real private keys to a public repository.
 
-## 📄 Licence
-Ce projet est sous licence libre. Voir le fichier LICENSE pour plus de détails.
+## 📄 License
+This project is under a free license. See the LICENSE file for more details.
+
+
